@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>corndog</title>
+    <meta charset="UTF-8" />
+    <link
+        rel="stylesheet"
+        href="xp.css"
+    >
+    <link
+        rel="stylesheet"
+        href="eyes.css"
+    >
+    <style>
+        html {
+            height: 100%
+        }
+        body {
+            background-image: url("./bliss.jpg");
+            background-repeat: no-repeat;
+            background-size: cover !important;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+    type="application/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="eyes.js"></script>
+  </head>
+  <body class="move-area">
+    <div class="window" style="margin: 32px;  width: 820px">
+        <div class="title-bar">
+            <div class="title-bar-text">Command Prompt</div>
+            <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <pre id="prompt_content">Microsoft&#10094;R&#10095; Windows DOS 
+        &#10094;C&#10095; Copyright Microsoft Corp 1990-2001.
+            <br>C:&#92;WINDOWS&#92;SYSTEM32> CORE.EXE
+            </pre>
+        </div>
+    </div>
+    <div class="window" style="margin: 32px; max-width: 550px" id="metamask_connect_window">
+      <div class="title-bar">
+        <div class="title-bar-text" id="windowTitle">
+          Connect Metamask
+        </div>
+
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close" onClick="//hide_metamask_popup()"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p id="windowContent">loading...</p>
+      </div>
+    </div>
+    <div class="window" style="margin: 32px; height: 290px; width: 300px" id="eyes.exe">
+        <div class="title-bar">
+            <div class="title-bar-text" id="windowTitle">
+              Meta&trade;
+            </div>
+    
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button>
+              <button aria-label="Close" onClick="alert('adorable...')"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div id="zucky_cucky" >
+                <div style="position: relative;">
+                    <section id="eyes_rel">
+                        <div class='.eyes_container'>
+                            <div class='eye'></div>
+                            <div class='eye'></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+<script>
+    $(document).ready(() => {
+        start();
+        init_eyes();
+    })
+</script>
