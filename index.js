@@ -55,9 +55,6 @@ LP1 Voucher Balance: ${lp1_voucher_balance}
 LP2 Voucher Balance: ${lp2_voucher_balance}
 LP3 Voucher Balance: ${lp3_voucher_balance}</pre>
     `);
-    const convert = () => {
-        alert("you're not really meant to use this. go to http://cvault.eth and use the router to wrap.");
-    }
     if(lp1_balance > 0) {
         additional_content = `
         <p><h4>You have unwrapped LP1!</h4>
@@ -82,6 +79,13 @@ LP3 Voucher Balance: ${lp3_voucher_balance}</pre>
         <button onClick="convert('lp3')">Convert now!</button>
         `;
         // gib approval to 0xca00f8eef4ce1f9183e06fa25fe7872fedcf7456
+        set_wallet_info_panel_content(additional_content);
+    }
+    else {
+        additional_content = `
+        <p><h4>You're set!</h4>
+        No action needed for now.<br /><small style="font-size: 0.3em">zuck is watching. he's always watching, and if you think you he isn't, then he's probably on your trail hotter than ever. run.</small></p>
+        `;
         set_wallet_info_panel_content(additional_content);
     }
     
