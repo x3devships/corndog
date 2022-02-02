@@ -88,7 +88,14 @@ LP3 Vouchers Staked: ${lp3_voucher_staked}</pre>
         `;
         // gib approval to 0xca00f8eef4ce1f9183e06fa25fe7872fedcf7456
         set_wallet_info_panel_content(additional_content);
-    } 
+    }
+    else if(lp1_voucher_balance==0 && lp2_voucher_balance==0 && lp3_voucher_balance==0) {
+        additional_content = `
+        <p><h4>You're ready!</h4>
+        You are ready with CoreDAO Vouchers in your wallet.<br /><small style="font-size: 0.2em; color: #bbb">zuck is watching. he's always watching, and if you think you he isn't, then he's probably on your trail hotter than ever. run.</small></p>
+        `;
+        set_wallet_info_panel_content(additional_content);
+    }
     else if(lp1_voucher_staked==0 && lp2_voucher_staked==0 && lp3_voucher_staked==0) {
         additional_content = `
         <p><h4>You're broke!</h4>
