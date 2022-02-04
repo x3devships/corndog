@@ -164,6 +164,7 @@ const check_selected_address_again_lol = () => {
 }
 
 const start = () => {
+    return;
     if(metamask_available) {
         console.log("metamask_available");
         window.ethereum.on('accountsChanged', function (accounts) {
